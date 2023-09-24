@@ -1,0 +1,133 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.main-container{
+  background-image: url("./Fondo-presentacion.png");
+}
+.nav-container {
+  display: flex;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container-links{
+  display: grid;
+  margin-top: 35px;
+}
+
+.logo img {
+  width: 370px;
+  height: 130px;
+  margin-right: 10px;
+}
+
+.home-section{
+  display: grid;
+  text-align: center;
+  font-size: x-large;
+}
+.home-section h2{
+  margin: 0%;
+  color: aliceblue;
+}
+.home-section h3{
+  color: #d4b75ecb;
+}
+.button-cotiz{
+  border: none;
+  width: 180px;
+  height: 60px;
+  background-color: #d4b75ecb;
+  color: whitesmoke;
+  font-size: x-large;
+  font-weight: bolder;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s; 
+}
+.button-cotiz:hover{
+  transform: scale(1.2);
+  background-color: rgb(57, 190, 57);
+  box-shadow: 7px 7px 9px rgba(255, 255, 255);
+}
+
+.menu-container {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  text-align: left;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.menu-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Carrusel */
+.carrusel-container {
+  /* max-width: 200px; Ancho máximo del contenedor */
+  overflow: hidden;
+  margin: 20px auto; /* Centrar el carrusel en la página */
+}
+
+.carrusel {
+  width: 100%; /* Asegúrate de que el carrusel ocupe el 100% del contenedor */
+  position: relative;
+  overflow: hidden;
+}
+
+.carrusel-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel img {
+  width: 200px; /* Ancho de cada imagen igual al contenedor */
+  height: auto;
+  margin: 0;
+  cursor: pointer; /* Cambia el cursor a mano cuando pasa sobre las imágenes */
+  transition: transform 0.2s ease-in-out; /* Efecto de escala al pasar el mouse */
+}
+
+.carrusel img:hover {
+  transform: scale(1.1); /* Ampliar ligeramente la imagen al pasar el mouse */
+}
+
+/* Agrega estilos para los enlaces de navegación si es necesario */
+.menu-container a:hover {
+  text-decoration: underline;
+  /* Agrega otros estilos de resaltado cuando se pasa el mouse si es necesario */
+}
+
+/* Agrega estilos para el fondo del carrusel */
+.carrusel-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 223, 186, 0.5); /* Fondo dorado con transparencia */
+}
+
+  @media (max-width: 660px) {
+    .contact-links {
+      display: none;
+    }
+    .nav-container {
+      justify-content: space-between;
+    }
+  
+    .menu-container {
+      display: none;
+    }
+   
+    
+  }
