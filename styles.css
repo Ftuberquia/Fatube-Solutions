@@ -57,6 +57,14 @@ body {
   box-shadow: 7px 7px 9px rgba(255, 255, 255);
 }
 
+.Construction{
+  display: block;
+  margin: 0 auto; /* Esto centra horizontalmente */
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+}
+
 .menu-container {
   list-style: none;
   display: flex;
