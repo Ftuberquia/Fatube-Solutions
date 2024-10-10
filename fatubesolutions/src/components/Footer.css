@@ -1,0 +1,15 @@
+footer {
+  background-color: #003366; /* Fondo azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centrar el texto */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container p {
+  margin: 0; /* Eliminar margen */
+  font-size: 1rem; /* Tamaño del texto */
+  color: #f0d964; /* Color dorado */
+}

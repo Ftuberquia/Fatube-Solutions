@@ -1,0 +1,27 @@
+.about-section {
+  padding: 60px 20px; /* Espaciado superior e inferior */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #003366; /* Texto azul oscuro */
+  text-align: center; /* Centrar el texto */
+}
+
+.about-content {
+  max-width: 800px; /* Ancho máximo para la sección */
+  margin: 0 auto; /* Centrar el contenido */
+  display: flex; /* Usar flexbox para el diseño */
+  align-items: center; /* Centrar verticalmente */
+  flex-direction: column; /* Cambiar a columna para el diseño responsivo */
+}
+
+.about-content img {
+  width: 150px; /* Ancho de la imagen de perfil */
+  height: auto; /* Mantener la relación de aspecto */
+  border-radius: 50%; /* Imagen circular */
+  margin-bottom: 20px; /* Espaciado inferior de la imagen */
+}
+
+.about-content p {
+  font-size: 1.1rem; /* Tamaño del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin: 0; /* Eliminar margen */
+}

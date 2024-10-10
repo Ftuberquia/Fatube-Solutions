@@ -1,0 +1,60 @@
+nav {
+  background-color: rgba(0, 21, 43, 0.7); /* Fondo azul oscuro translúcido */
+  padding: 10px 20px; /* Espaciado superior e inferior */
+  position: fixed; /* Fijar la barra de navegación */
+  width: 100%; /* Ancho completo */
+  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+.navbar {
+  display: flex; /* Usar flexbox para organizar el contenido */
+  justify-content: space-between; /* Espacio entre logo y enlaces */
+  align-items: center; /* Alinear verticalmente */
+}
+
+.logo {
+  width: 70%; /* Ancho del logo del 50% */
+  display: flex; /* Usar flexbox para centrar el logo */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+.logo img {
+  max-width: 100%; /* Asegurarse de que el logo no exceda el contenedor */
+  height: auto; /* Mantener la relación de aspecto */
+}
+
+.container-links {
+  display: flex; /* Usar flexbox para la sección de enlaces */
+  align-items: center; /* Alinear verticalmente */
+}
+
+.contact-links a {
+  margin-right: 15px; /* Espaciado entre los iconos de contacto */
+}
+
+.contact-links img {
+  width: 25px; /* Ancho fijo para los iconos */
+  height: auto; /* Mantener la relación de aspecto */
+}
+
+.menu {
+  list-style-type: none; /* Eliminar viñetas de la lista */
+  margin: 0; /* Eliminar margen */
+  padding: 0; /* Eliminar padding */
+  display: flex; /* Usar flexbox para la lista */
+}
+
+.menu li {
+  margin-left: 20px; /* Espaciado entre los elementos de la lista */
+}
+
+.menu a {
+  text-decoration: none; /* Eliminar subrayado */
+  color: #f0d964; /* Color dorado para el texto */
+  font-weight: bold; /* Texto en negrita */
+  transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.menu a:hover {
+  color: #ffffff; /* Color blanco en hover */
+}

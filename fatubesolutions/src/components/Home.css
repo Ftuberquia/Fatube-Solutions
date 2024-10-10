@@ -1,0 +1,39 @@
+.home-section {
+  height: 100vh; /* Altura completa de la pantalla */
+  background-color: #0e2174; /* Fondo azul oscuro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff; /* Texto en blanco */
+}
+
+.home-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f0d964; /* Color dorado */
+}
+
+.home-section h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #ffffff; /* Texto blanco */
+}
+
+.home-section .button-cotiz {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #f0d964; /* Fondo dorado */
+  color: #003366; /* Texto azul oscuro */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-section .button-cotiz:hover {
+  background-color: #1eff00; /* Azul más claro en hover */
+  color: #ffffff; /* Texto blanco en hover */
+}
