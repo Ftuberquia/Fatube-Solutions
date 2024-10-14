@@ -13,7 +13,7 @@ nav {
 }
 
 .logo {
-  width: 70%; /* Ancho del logo del 50% */
+  width: 80%; /* Ancho del logo del 50% */
   display: flex; /* Usar flexbox para centrar el logo */
   justify-content: center; /* Centrar horizontalmente */
 }
@@ -30,11 +30,48 @@ nav {
 
 .contact-links a {
   margin-right: 15px; /* Espaciado entre los iconos de contacto */
+  display: inline-block; /* Para aplicar correctamente las transformaciones */
+  transition: transform 0.3s ease; /* Suavizar la transformación */
 }
 
 .contact-links img {
-  width: 25px; /* Ancho fijo para los iconos */
-  height: auto; /* Mantener la relación de aspecto */
+  width: 40px; /* Ancho fijo para los iconos */
+  height: 40px; /* Alto fijo para los iconos */
+  object-fit: contain; /* Asegurarse de que la imagen se ajuste dentro del contenedor */
+}
+
+.icon-mail img {
+  width: 48px; /* Tamaño del ícono de correo */
+  height: 48px; /* Ajuste a proporciones específicas */
+  object-fit: cover;
+}
+
+.icon-whatsapp img {
+  width: 45px; /* Tamaño del ícono de WhatsApp */
+  height: 45px;
+  object-fit: cover;
+}
+
+.icon-facebook img {
+  width: 59px; /* Tamaño del ícono de Facebook */
+  height: 59px;
+  object-fit: cover;
+}
+
+
+/* Animación continua de giro (opcional, si quieres que siempre giren) */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aplicar animación continua a los íconos si lo deseas */
+.contact-links img:hover {
+  animation: rotate 2s infinite linear;
 }
 
 .menu {
