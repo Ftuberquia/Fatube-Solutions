@@ -20,8 +20,8 @@ const Navbar = () => {
             <a href="mailto:correo@example.com" className="icon-mail"><img src={mailIcon} alt="Correo" /></a>
             <a href="https://wa.me/1234567890" className="icon-whatsapp"><img src={whatsappIcon} alt="WhatsApp" /></a>
             <a href="https://facebook.com/tunombre" className="icon-facebook"><img src={facebookIcon} alt="Facebook" /></a>
-            <a href="https://linkedin.com/in/tunombre"><img src={linkedinIcon} alt="LinkedIn" /></a>
-            <a href="https://github.com/tunombre"><img src={githubIcon} alt="GitHub" /></a>
+            <a href="https://linkedin.com/in/tunombre" className="icon-linkedin"><img src={linkedinIcon} alt="LinkedIn" /></a>
+            <a href="https://github.com/tunombre" className="icon-github"><img src={githubIcon} alt="GitHub" /></a>
           </div>
           <ul className="menu">
             <li><a href="#home">Inicio</a></li>
