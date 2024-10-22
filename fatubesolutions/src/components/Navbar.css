@@ -1,5 +1,5 @@
 nav {
-  background-color: rgba(0, 21, 43, 0.7); /* Fondo azul oscuro translúcido */
+  background-color: rgba(6, 19, 134, 0.7); /* Fondo azul oscuro translúcido */
   position: fixed; /* Fijar la barra de navegación */
   width: 100%; /* Ancho completo */
   z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */

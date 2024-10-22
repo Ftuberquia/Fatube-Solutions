@@ -1,39 +1,57 @@
+/* Estilo básico para la sección */
 .home-section {
-  height: 100vh; /* Altura completa de la pantalla */
-  background-color: #0e2174; /* Fondo azul oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Slider container */
+.slider {
+  position: relative;
+  width: 80%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Estilos de cada slide */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Estilos de las tarjetas */
+.card {
+  background-color: rgb(146, 233, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
   text-align: center;
-  color: #ffffff; /* Texto en blanco */
 }
 
-.home-section h3 {
-  font-size: 1.5rem;
+.card h2 {
+  font-size: 24px;
+  color: #333;
   margin-bottom: 10px;
-  color: #f0d964; /* Color dorado */
 }
 
-.home-section h2 {
-  font-size: 2rem;
-  margin-bottom: 5px;
-  color: #ffffff; /* Texto blanco */
-}
-
-.home-section .button-cotiz {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  background-color: #f0d964; /* Fondo dorado */
-  color: #003366; /* Texto azul oscuro */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.home-section .button-cotiz:hover {
-  background-color: #1eff00; /* Azul más claro en hover */
-  color: #ffffff; /* Texto blanco en hover */
+.card p {
+  font-size: 18px;
+  color: #666;
 }
