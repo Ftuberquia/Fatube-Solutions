@@ -40,19 +40,25 @@ const Home = () => {
 
   return (
     <section id="home" className="home-section">
-      <div className="slider">
+      <div className="slide-section">
+        <div className="slider">
         {slides.map((slide, index) => (
           <div
             key={index}
             className={`slide ${index === currentSlide ? 'active' : ''}`}
           >
-            <div className="card">
+            <div className="card-service">
               <h2>{slide.title}</h2>
               <p>{slide.description}</p>
             </div>
           </div>
         ))}
-      </div>
+       </div>
+        <div className="card-sale">
+          <h1>Promosiones</h1>
+        </div>
+        </div>
+        <div className="boton-cotiz">Cotizacion</div>
     </section>
   );
 };

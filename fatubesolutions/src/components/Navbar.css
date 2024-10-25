@@ -1,71 +1,109 @@
 nav {
-  background-color: rgba(6, 19, 134, 0.7); /* Fondo azul oscuro translúcido */
-  position: fixed; /* Fijar la barra de navegación */
-  width: 100%; /* Ancho completo */
-  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+  background-color: rgba(8, 12, 48, 0.8);
+  /* Fondo azul oscuro translúcido */
+  position: fixed;
+  /* Fijar la barra de navegación */
+  width: 100%;
+  /* Ancho completo */
+  z-index: 1000;
+  /* Asegurarse de que esté por encima de otros elementos */
 }
 
 .navbar {
-  display: flex; /* Usar flexbox para organizar el contenido */
-  align-items: center; /* Alinear verticalmente */
+  display: flex;
+  /* Usar flexbox para organizar el contenido */
+  align-items: center;
+  /* Alinear verticalmente */
   width: 100%;
 
 }
 
+.nav-container-contact {
+  background-color: #136fd1;
+  color: white;
+}
+
+
 .logo {
-  display: flex; /* Usar flexbox para centrar el logo */
+  display: flex;
+  /* Usar flexbox para centrar el logo */
   margin-right: 0;
 }
+
 .logo img {
-  max-width: 100%; /* Asegurarse de que el logo no exceda el contenedor */
-  height: auto; /* Mantener la relación de aspecto */
+  max-width: 100%;
+  /* Asegurarse de que el logo no exceda el contenedor */
+  height: auto;
+  /* Mantener la relación de aspecto */
 }
 
 .container-links {
   flex-grow: 1;
-  display: flex; /* Usar flexbox para la sección de enlaces */
-  flex-direction: column; /* Alinear los íconos y el menú en columna */
-  align-items: center; /* Alinear verticalmente */
+  display: flex;
+  /* Usar flexbox para la sección de enlaces */
+  flex-direction: column;
+  /* Alinear los íconos y el menú en columna */
+  align-items: center;
+  /* Alinear verticalmente */
 }
 
 .contact-links a {
-  margin-right: 15px; /* Espaciado entre los iconos de contacto */
-  display: inline-block; /* Para aplicar correctamente las transformaciones */
-  transition: transform 0.3s ease; /* Suavizar la transformación */
+  margin-right: 15px;
+  /* Espaciado entre los iconos de contacto */
+  display: inline-block;
+  /* Para aplicar correctamente las transformaciones */
+  transition: transform 0.3s ease;
+  /* Suavizar la transformación */
   padding: 0;
   border: none;
   outline: none;
 }
+
 .contact-links a img {
   display: inline-block;
-  margin: 0; /* Eliminar cualquier margen residual */
-  padding: 0; /* Eliminar cualquier padding */
-  vertical-align: middle; /* Alinea verticalmente el ícono */
+  margin: 0;
+  /* Eliminar cualquier margen residual */
+  padding: 0;
+  /* Eliminar cualquier padding */
+  vertical-align: middle;
+  /* Alinea verticalmente el ícono */
 }
 
 .icon-mail img {
-  width: 43px; /* Tamaño del ícono de correo */
-  height: 43px; /* Ajuste a proporciones específicas */
-  object-fit: cover; /* Ajusta este valor según lo que necesites */
+  width: 43px;
+  /* Tamaño del ícono de correo */
+  height: 43px;
+  /* Ajuste a proporciones específicas */
+  object-fit: cover;
+  /* Ajusta este valor según lo que necesites */
 }
+
 .icon-whatsapp img {
-  width: 41px; /* Tamaño del ícono de WhatsApp */
+  width: 41px;
+  /* Tamaño del ícono de WhatsApp */
   height: 41px;
   object-fit: cover;
 }
+
 .icon-facebook img {
-  width: 56px; /* Tamaño del ícono de Facebook */
+  width: 56px;
+  /* Tamaño del ícono de Facebook */
   height: 56px;
   object-fit: cover;
-  margin-bottom: 2px; /* Ajusta este valor según lo que necesites */
+  margin-bottom: 2px;
+  /* Ajusta este valor según lo que necesites */
 }
+
 .icon-linkedin img {
-  width: 39px; /* Tamaño del ícono de Facebook */
+  width: 39px;
+  /* Tamaño del ícono de Facebook */
   height: 39px;
   object-fit: cover;
 }
+
 .icon-github img {
-  width: 40px; /* Tamaño del ícono de Facebook */
+  width: 40px;
+  /* Tamaño del ícono de Facebook */
   height: 40px;
   object-fit: cover;
 }
@@ -75,6 +113,7 @@ nav {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -86,31 +125,47 @@ nav {
 }
 
 .menu {
-  list-style-type: none; /* Eliminar viñetas de la lista */
-  margin: 0; /* Eliminar margen */
-  padding: 0; /* Eliminar padding */
-  display: flex; /* Usar flexbox para la lista */
+  list-style-type: none;
+  /* Eliminar viñetas de la lista */
+  margin: 0;
+  /* Eliminar margen */
+  padding: 0;
+  /* Eliminar padding */
+  display: flex;
+  /* Usar flexbox para la lista */
 }
 
 .menu li {
-  margin-left: 30px; /* Espaciado entre los elementos de la lista */
-  overflow: hidden; /* Evita que el navbar se ajuste a los cambios de tamaño del texto */
+  margin-left: 30px;
+  /* Espaciado entre los elementos de la lista */
+  overflow: hidden;
+  /* Evita que el navbar se ajuste a los cambios de tamaño del texto */
 }
 
 .menu a {
-  text-decoration: none; /* Eliminar subrayado */
-  color: #f0d964; /* Color dorado para el texto */
-  font-weight: bold; /* Texto en negrita */
-  transition: color 0.3s ease; /* Transición suave para el hover */
+  text-decoration: none;
+  /* Eliminar subrayado */
+  color: #f0d964;
+  /* Color dorado para el texto */
+  font-weight: bold;
+  /* Texto en negrita */
+  transition: color 0.3s ease;
+  /* Transición suave para el hover */
 }
+
 .menu li a {
-  font-size: 16px; /* Tamaño inicial del texto */
+  font-size: 16px;
+  /* Tamaño inicial del texto */
 }
 
 .menu a:hover {
-  color: #ffffff; /* Color blanco en hover */
-  font-size: 20px; /* Tamaño del texto al pasar el cursor */
+  color: #ffffff;
+  /* Color blanco en hover */
+  font-size: 20px;
+  /* Tamaño del texto al pasar el cursor */
 }
+
 .menu li a:hover {
-  transform: scale(1.3); /* Aumenta el tamaño del texto sin afectar al resto del navbar */
+  transform: scale(1.3);
+  /* Aumenta el tamaño del texto sin afectar al resto del navbar */
 }

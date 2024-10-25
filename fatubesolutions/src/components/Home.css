@@ -1,57 +1,97 @@
-/* Estilo básico para la sección */
+/* Estructura básica */
 .home-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  padding: 20px;
   background-color: #f8f9fa;
+  height: 100vh;
 }
 
-/* Slider container */
-.slider {
-  position: relative;
-  width: 80%;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-/* Estilos de cada slide */
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Para alinear slider y card-sale horizontalmente */
+.slide-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  /* Espacio entre el slide-section y el botón de cotización */
+}
+
+/* Slider styling */
+.slider {
+  flex: 2;
+  /* Ocupa más espacio que la card-sale */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  display: none;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
 .slide.active {
+  display: block;
   opacity: 1;
 }
 
-/* Estilos de las tarjetas */
-.card {
-  background-color: rgb(146, 233, 255);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+/* Tarjetas de servicio dentro del slider */
+.card-service {
   text-align: center;
 }
 
-.card h2 {
+.card-service h2 {
   font-size: 24px;
-  color: #333;
   margin-bottom: 10px;
+  color: #333;
 }
 
-.card p {
-  font-size: 18px;
+.card-service p {
+  font-size: 16px;
   color: #666;
+}
+
+/* Card-sale */
+.card-sale {
+  flex: 1;
+  /* Ocupa menos espacio que el slider */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-sale h1 {
+  font-size: 24px;
+  color: #d9534f;
+}
+
+/* Botón de cotización */
+.boton-cotiz {
+  padding: 10px 20px;
+  background-color: #136fd1;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  /* Peso normal por defecto */
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, font-weight 0.2s ease;
+}
+
+/* Efecto al pasar el cursor */
+.boton-cotiz:hover {
+  background-color: #21db31;
+  transform: scale(1.2);
+  /* Aumenta el tamaño del botón al pasar el cursor */
+  font-weight: 700;
+  /* Cambia el peso de la fuente a más gruesa */
 }
