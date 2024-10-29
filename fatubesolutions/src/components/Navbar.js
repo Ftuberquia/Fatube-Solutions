@@ -1,39 +1,69 @@
-import React from 'react';
-import mailIcon from '../assets/iconoemail3d.png';
-import whatsappIcon from '../assets/iconowhatsapp3d.png';
-import facebookIcon from '../assets/iconofacebook3d.png';
-import linkedinIcon from '../assets/logolinkedin.png';
-import githubIcon from '../assets/logogithub.png';
-import logo from '../assets/Fatube-logo.png'
-
+import React, { useState } from 'react';
+import logo from '../assets/Fatube-logo.png';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [showServices, setShowServices] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowServices(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowServices(false);
+  };
+
   return (
     <nav>
-      <div className="nav-container-contact">contactanos</div>
+      <div className="nav-container-contact">Contactanos</div>
       <div className="navbar">
         <div className="logo">
           <img src={logo} alt="Fatube Logo" />
         </div>
         <div className="container-links">
-          {/* <div className="contact-links">
-            <a href="mailto:correo@example.com" className="icon-mail"><img src={mailIcon} alt="Correo" /></a>
-            <a href="https://wa.me/1234567890" className="icon-whatsapp"><img src={whatsappIcon} alt="WhatsApp" /></a>
-            <a href="https://facebook.com/tunombre" className="icon-facebook"><img src={facebookIcon} alt="Facebook" /></a>
-            <a href="https://linkedin.com/in/tunombre" className="icon-linkedin"><img src={linkedinIcon} alt="LinkedIn" /></a>
-            <a href="https://github.com/tunombre" className="icon-github"><img src={githubIcon} alt="GitHub" /></a>
-          </div> */}
           <ul className="menu">
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#contact">Contáctame</a></li>
+            <li
+              className="services-menu"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link to="#services">Servicios</Link>
+              {showServices && (
+                <div className="services-dropdown">
+                  <ul>
+                    <li><Link to="/servicios/diseno-web" target="_blank">Diseño de Páginas Web</Link></li>
+                    <li><Link to="/servicios/hosting y mantenimiento" target="_blank">Hosting y mantenimiento</Link></li>
+                    <li><Link to="/servicios/marketing digital" target="_blank">Marketing digital</Link></li>
+                    <li><Link to="/servicios/diseño UX/UI" target="_blank">Diseño UX/UI</Link></li>
+                    <li><Link to="/servicios/software-empresarial" target="_blank">Software Empresarial</Link></li>
+                    <li><Link to="/servicios/consultoria" target="_blank">Consultoría Tecnológica</Link></li>
+                    <li><Link to="/servicios/ciberseguridad" target="_blank">Ciberseguridad</Link></li>
+                    <li><Link to="/servicios/analítica-de-datos" target="_blank">Analítica de datos</Link></li>
+                    <li><Link to="/servicios/aplicaciones móviles" target="_blank">Aplicaciones móviles</Link></li>
+                    <li><Link to="/servicios/desarrollo de video juegos" target="_blank">Desarrollo de video juegos</Link></li>
+                    <li><Link to="/servicios/IoT (Internet de las Cosas)" target="_blank">IoT (Internet de las Cosas)</Link></li>
+                    <li><Link to="/servicios/automatización-y-atención-al-cliente" target="_blank">Automatización y atención al cliente</Link></li>
+                  </ul>
+                </div>
+              )}
+            </li>
+            <li><a href="#contact">Contáctar</a></li>
             <li><a href="#about">Sobre Fatube</a></li>
             <li><a href="#portfolio">Portafolio</a></li>
           </ul>
         </div>
       </div>
-      <div className="nav-container-contact">Paginas Web | Desarrollo aplicaciones | Sofotware empresarial | Consultoria Tegnologica | Ciberseguridad</div>
+      <div className="nav-container-service">
+        <a href="/servicios/diseno-web" target="_blank">Diseño de Páginas Web</a> |
+        <a href="/servicios/software-empresarial" target="_blank">Software Empresarial</a> |
+        <a href="/servicios/consultoria" target="_blank">Consultoría Tecnológica</a> |
+        <a href="/servicios/ciberseguridad" target="_blank">Ciberseguridad</a> |
+        <a href="/servicios/Analítica de datos" target="_blank">Analítica de datos</a> |
+        <a href="/servicios/E-commerce" target="_blank">E-commerce</a> |
+        <a href="/servicios/Automatización y atención al cliente" target="_blank">Automatización y atención al cliente</a>
+      </div>
     </nav>
   );
 };
