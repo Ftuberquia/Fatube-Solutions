@@ -38,9 +38,42 @@
 }
 
 .card-presentation h1 {
-  color: #333;
+  color: #0a4a84;
   font-size: 1.5rem;
   margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  /* Espacio para la viñeta */
+  overflow: hidden;
+  /* Asegura que la animación no exceda el contenedor */
+}
+
+.card-presentation h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 50%;
+  /* Cubre la mitad del contenedor */
+  background-color: #a7c5eb;
+  /* Color de la viñeta */
+  border-radius: 0 5px 5px 0;
+  /* Bordes redondeados para dar forma de viñeta */
+  animation: expandBackground 1s ease forwards;
+  /* Inicia la animación al cargar */
+}
+
+@keyframes expandBackground {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+    height: 100%;
+    /* Ancho final de la viñeta */
+  }
 }
 
 .card-presentation p {
@@ -84,7 +117,7 @@
 .card-service h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #333;
+  color: #084c61;
 }
 
 .card-service p {

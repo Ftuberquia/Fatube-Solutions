@@ -31,7 +31,7 @@ const Navbar = () => {
               onMouseLeave={handleMouseLeave}
             >
               <Link to="/services">Servicios</Link>
-              <HiArrowCircleDown style={{ marginLeft: '5px', color: '#f0d964', marginTop: '1px' }} />
+              <HiArrowCircleDown style={{ marginLeft: '5px', color: '#f0d964', marginTop: '1px', cursor: 'pointer' }} />
               {showServices && (
                 <div className="services-dropdown">
                   <ul>

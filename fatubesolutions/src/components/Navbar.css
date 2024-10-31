@@ -151,7 +151,6 @@ nav {
   font-size: 18px;
 }
 
-
 .menu li a:hover {
   transform: scale(1.1);
 }
@@ -159,17 +158,16 @@ nav {
 /* Estilos para la tarjeta flotante de servicios */
 .services-dropdown {
   position: absolute;
-  top: 60px;
+  top: 75px;
   /* Ajusta la distancia desde la barra de navegación */
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(12, 55, 100, 0.9);
+  background-color: rgba(174, 208, 245, 0.9);
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
   z-index: 1000;
   width: 250px;
-  color: white;
 }
 
 .services-dropdown ul {
@@ -178,15 +176,18 @@ nav {
 }
 
 .services-dropdown li {
-  padding: 8px 0;
+  padding: 3px 5px;
+  /* Ajusta el padding para un espaciado más cómodo */
+  text-align: left;
+  /* Asegura que el texto esté alineado hacia la izquierda */
 }
 
 .services-dropdown a {
-  color: rgb(134, 99, 99);
+  color: #136fd1;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .services-dropdown a:hover {
-  color: white;
+  color: #0040b8;
 }
