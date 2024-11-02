@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { FaFacebookSquare, FaWhatsappSquare } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import './Services.css';
 
 const servicesData = [
@@ -33,6 +35,18 @@ const Services = () => {
 
     return (
         <div className="services-container">
+            <div className="social-icons">
+                <a href="mailto:tucorreo@correo.com" target="_blank" rel="noopener noreferrer">
+                    <SiGmail className="social-icon" />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <FaFacebookSquare className="social-icon" />
+                </a>
+                <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
+                    <FaWhatsappSquare className="social-icon" />
+                </a>
+            </div>
+
             <h1 className="services-title">Servicios FatubeSolutions</h1>
             <div className="services-cards">
                 {servicesData.map(service => (

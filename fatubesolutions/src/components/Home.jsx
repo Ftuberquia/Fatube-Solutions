@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { FaFacebookSquare, FaWhatsappSquare } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import './Home.css';
 
 const slides = [
@@ -40,6 +42,18 @@ const Home = () => {
 
   return (
     <section id="home" className="home-section">
+      <div className="social-icons">
+        <a href="mailto:tucorreo@correo.com" target="_blank" rel="noopener noreferrer">
+          <SiGmail className="social-icon" />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <FaFacebookSquare className="social-icon" />
+        </a>
+        <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
+          <FaWhatsappSquare className="social-icon" />
+        </a>
+      </div>
+
       <div className="slide-section">
         <div className="card-presentation">
           <h1>¿Por qué elegir a FatubeSolutions como tu proveedor de servicios tecnológicos?</h1>
