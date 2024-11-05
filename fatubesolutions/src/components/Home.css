@@ -34,9 +34,23 @@
 
 .social-icons a:hover {
   transform: scale(1.2);
-  color: #21db31;
+  /* color: #21db31; */
 }
 
+.social-icons a.facebook:hover {
+  color: #1877F2;
+  /* Color azul estándar de Facebook */
+}
+
+.social-icons a.gmail:hover {
+  color: #EA4335;
+  /* Color rojo estándar de Gmail */
+}
+
+.social-icons a.whatsapp:hover {
+  color: #25D366;
+  /* Color verde estándar de WhatsApp */
+}
 
 /* Para alinear slider y card-sale horizontalmente */
 .slide-section {
