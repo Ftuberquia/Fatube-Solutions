@@ -1,27 +1,127 @@
-.about-section {
-  padding: 60px 20px; /* Espaciado superior e inferior */
-  background-color: #ffffff; /* Fondo blanco */
-  color: #003366; /* Texto azul oscuro */
-  text-align: center; /* Centrar el texto */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: #0a4a84;
+  min-height: 100vh;
+  background-color: #f9f9f9;
 }
 
 .about-content {
-  max-width: 800px; /* Ancho máximo para la sección */
-  margin: 0 auto; /* Centrar el contenido */
-  display: flex; /* Usar flexbox para el diseño */
-  align-items: center; /* Centrar verticalmente */
-  flex-direction: column; /* Cambiar a columna para el diseño responsivo */
+  max-width: 70%;
+  text-align: center;
 }
 
-.about-content img {
-  width: 150px; /* Ancho de la imagen de perfil */
-  height: auto; /* Mantener la relación de aspecto */
-  border-radius: 50%; /* Imagen circular */
-  margin-bottom: 20px; /* Espaciado inferior de la imagen */
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0a4a84;
 }
 
-.about-content p {
-  font-size: 1.1rem; /* Tamaño del texto */
-  line-height: 1.6; /* Espaciado entre líneas */
-  margin: 0; /* Eliminar margen */
+.about-content h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.about-content p,
+.about-content ul {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.contact-tab {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 150px;
+  background-color: #0a4a84;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px 0 0 8px;
+}
+
+.contact-tab:hover {
+  width: 200px;
+}
+
+/* Opciones de animación */
+.contact-tab:hover {
+  width: 200px;
+  transition: width 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Segunda opción: rebote */
+/* .contact-tab:hover {
+  animation: bounce 0.5s ease-out;
+} */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateY(-52%) scale(1.05);
+  }
+
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.contact-buttons button {
+  background-color: #a7c5eb;
+  color: #0a4a84;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  text-align: center;
+}
+
+.contact-links {
+  display: none;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.contact-tab:hover .contact-links {
+  display: block;
+}
+
+.contact-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  margin: 5px 0;
+}
+
+.contact-links a:hover {
+  color: #a7c5eb;
 }

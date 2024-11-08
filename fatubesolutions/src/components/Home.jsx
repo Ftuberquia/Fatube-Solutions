@@ -56,7 +56,7 @@ const Home = () => {
 
       <div className="slide-section">
         <div className="card-presentation">
-          <h1>¿Por qué elegir a FatubeSolutions como tu proveedor de servicios tecnológicos?</h1>
+          <h1>Elige! FatubeSolutions como tu proveedor de servicios tecnológicos</h1>
           <p>En FatubeSolutions, contamos con un equipo de expertos y especialistas en tecnología y servicios informáticos, con una sólida experiencia en gestionar soluciones de TI para empresas. Nuestro objetivo es ofrecer soluciones integrales y personalizadas que generen un verdadero valor agregado, optimizando recursos y aumentando la rentabilidad de tu empresa. Por ello, nos destacamos por:</p>
           <p>Experiencia, Alta calidad, Flexibilidad, Puntualidad, Confidencialidad</p>
         </div>

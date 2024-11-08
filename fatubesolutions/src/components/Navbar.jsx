@@ -53,12 +53,12 @@ const Navbar = () => {
               )}
             </li>
             <li><Link to="#contact">Contáctar</Link></li>
-            <li><Link to="#about">Sobre Fatube</Link></li>
+            <li><Link to="/about">Sobre Fatube</Link></li>
             <li><Link to="#portfolio">Portafolio</Link></li>
           </ul>
         </div>
       </div>
-      <div className="nav-container-service">
+      {/* <div className="nav-container-service">
         <Link to="/servicios/diseno-web">Diseño de Páginas Web</Link> |
         <Link to="/servicios/software-empresarial">Software Empresarial</Link> |
         <Link to="/servicios/consultoria">Consultoría Tecnológica</Link> |
@@ -66,7 +66,7 @@ const Navbar = () => {
         <Link to="/servicios/analitica-de-datos">Analítica de datos</Link> |
         <Link to="/servicios/e-commerce">E-commerce</Link> |
         <Link to="/servicios/automatizacion-y-atencion-al-cliente">Automatización y atención al cliente</Link>
-      </div>
+      </div> */}
     </nav>
   );
 };
