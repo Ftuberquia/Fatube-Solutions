@@ -20,7 +20,7 @@ const About = () => {
         </a>
       </div>
       <div className="about-content">
-        <h1>FatubeSolutions</h1>
+        <h1 className="services-title">Servicios FatubeSolutions</h1>
         <h2>Sobre Nosotros</h2>
         <p>
           FatubeSolutions es una empresa innovadora y dinámica, fundada recientemente con la misión de transformar y optimizar soluciones tecnológicas en el mercado. Nuestro equipo joven y apasionado está decidido a superar desafíos y alcanzar nuevas alturas, siempre con un enfoque en la excelencia y el compromiso con nuestros clientes.

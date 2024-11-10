@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaFacebookSquare, FaWhatsappSquare } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import ContactSocials from './ContactSocials';
 import './Services.css';
 
 const servicesData = [
@@ -35,6 +36,7 @@ const Services = () => {
 
     return (
         <div className="services-container">
+            <ContactSocials />
             <div className="social-icons">
                 <a href="mailto:tucorreo@correo.com" target="_blank" rel="noopener noreferrer" className="gmail">
                     <SiGmail className="social-icon" />
@@ -56,6 +58,7 @@ const Services = () => {
                     </div>
                 ))}
             </div>
+
         </div>
     );
 };

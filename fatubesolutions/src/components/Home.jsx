@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaFacebookSquare, FaWhatsappSquare } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { FaQuoteLeft, FaEnvelope, FaPhone } from 'react-icons/fa';
+
 import './Home.css';
 
 const slides = [
@@ -53,7 +55,7 @@ const Home = () => {
           <FaWhatsappSquare className="social-icon" />
         </a>
       </div>
-
+      <h1 className="services-title">Bienvenidos a FatubeSolutions</h1>
       <div className="slide-section">
         <div className="card-presentation">
           <h1>Elige! FatubeSolutions como tu proveedor de servicios tecnológicos</h1>
@@ -75,6 +77,21 @@ const Home = () => {
         </div>
 
       </div>
+      <div className="contact-tab">
+        <div className="contact-buttons">
+          <button>
+            <FaQuoteLeft /> Cotizar
+          </button>
+          <button>
+            <FaEnvelope /> Contactar
+          </button>
+          <div className="contact-links">
+            <a href="mailto:info@fatubesolutions.com"><FaEnvelope /> Email</a>
+            <a href="tel:+123456789"><FaPhone /> Teléfono</a>
+          </div>
+        </div>
+      </div>
+
       <div className="boton-cotiz">Cotizacion</div>
     </section>
   );
