@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaFacebookSquare, FaWhatsappSquare } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
-import { FaQuoteLeft, FaEnvelope, FaPhone } from 'react-icons/fa';
+import ContactSocials from './ContactSocials';
 
 import './Home.css';
 
@@ -44,17 +42,7 @@ const Home = () => {
 
   return (
     <section id="home" className="home-section">
-      <div className="social-icons">
-        <a href="mailto:tucorreo@correo.com" target="_blank" rel="noopener noreferrer" className="gmail">
-          <SiGmail className="social-icon" />
-        </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="facebook">
-          <FaFacebookSquare className="social-icon" />
-        </a>
-        <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer" className="whatsapp">
-          <FaWhatsappSquare className="social-icon" />
-        </a>
-      </div>
+      <ContactSocials />
       <h1 className="services-title">Bienvenidos a FatubeSolutions</h1>
       <div className="slide-section">
         <div className="card-presentation">
@@ -76,20 +64,6 @@ const Home = () => {
           ))}
         </div>
 
-      </div>
-      <div className="contact-tab">
-        <div className="contact-buttons">
-          <button>
-            <FaQuoteLeft /> Cotizar
-          </button>
-          <button>
-            <FaEnvelope /> Contactar
-          </button>
-          <div className="contact-links">
-            <a href="mailto:info@fatubesolutions.com"><FaEnvelope /> Email</a>
-            <a href="tel:+123456789"><FaPhone /> Teléfono</a>
-          </div>
-        </div>
       </div>
 
       <div className="boton-cotiz">Cotizacion</div>
