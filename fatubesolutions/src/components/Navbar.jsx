@@ -52,7 +52,7 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li><Link to="#contact">Contáctar</Link></li>
+            <li><Link to="/contact">Contáctar</Link></li>
             <li><Link to="/about">Sobre Fatube</Link></li>
             <li><Link to="#portfolio">Portafolio</Link></li>
           </ul>

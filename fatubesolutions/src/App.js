@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Footer from './components/Footer';
 import Services from './components/Services'; // Asegúrate de importar el componente Service
+import ContactInfo from './components/ContactInfo'; // Importa tu componente de contacto
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:serviceName" element={<Services />} />
+        <Route path="/contact" element={<ContactInfo />} />
       </Routes>
       <Footer />
     </div>
