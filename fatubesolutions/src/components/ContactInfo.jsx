@@ -30,7 +30,7 @@ function ContactInfo() {
         "Soporte y Mantenimiento"
     ];
 
-    const handleInputChange = (e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
 
@@ -41,27 +41,46 @@ function ContactInfo() {
         }
     };
 
+    const handleServiciosChange = (e) => {
+        const { value, checked } = e.target;
+        setFormData((prevData) => {
+            const servicios = checked
+                ? [...prevData.servicios, value]
+                : prevData.servicios.filter((servicio) => servicio !== value);
+            return { ...prevData, servicios };
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Aquí puedes enviar los datos a un servidor o guardarlos localmente
+        console.log('Datos enviados:', formData);
+        // Ejemplo: guardarlos en localStorage
+        localStorage.setItem('formData', JSON.stringify(formData));
+    };
+
     return (
         <div className="contact-info-container">
             <div className="presentation">
-                <h2>En FatubeSolutions…</h2>
+                <h2>Contactos FatubeSolutions</h2>
                 <p>
-                    Estamos aquí para responder a todas tus preguntas y brindarte la asesoría que necesitas. Ya sea que estés interesado en nuestros servicios, estamos listos para ofrecerte soluciones personalizadas.
+                    ¡Hola! Estamos encantados de ayudarte a alcanzar tus objetivos. Nuestro equipo está listo para responder a todas tus preguntas y ofrecerte la asesoría que necesitas y soluciones personalizadas. ¡No dudes en contactarnos a través de nuestros medios o redes sociales, y empecemos a trabajar juntos para hacer realidad tus proyectos!
                 </p>
             </div>
 
             <div className="contact-form-container">
                 <div className="contact-form">
                     <h3>Contáctanos</h3>
-                    <form>
+                    <form onSubmit={handleSubmit}>
+
                         {["name", "country", "city", "email", "phone"].map((field) => (
                             <div key={field} className="form-group">
-                                <label>{field.charAt(0).toUpperCase() + field.slice(1)}</label>
                                 <input
                                     type="text"
                                     name={field}
+                                    placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
                                     value={formData[field]}
-                                    onChange={handleInputChange}
+                                    onChange={handleChange}
                                     required
                                 />
                                 {errors[field] && <p className="error-text">{errors[field]}</p>}
@@ -76,7 +95,7 @@ function ContactInfo() {
                                         type="checkbox"
                                         name="service"
                                         value={service}
-                                        onChange={handleInputChange}
+                                        onChange={handleServiciosChange}
                                     />
                                     <span>{service}</span>
                                 </div>
@@ -88,7 +107,7 @@ function ContactInfo() {
                             <textarea
                                 name="comments"
                                 value={formData.comments}
-                                onChange={handleInputChange}
+                                onChange={handleChange}
                             />
                             {errors.comments && <p className="error-text">{errors.comments}</p>}
                         </div>
@@ -99,7 +118,7 @@ function ContactInfo() {
                                 type="text"
                                 name="captcha"
                                 value={formData.captcha}
-                                onChange={handleInputChange}
+                                onChange={handleChange}
                             />
                             {errors.captcha && <p className="error-text">{errors.captcha}</p>}
                         </div>
